@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fancify Shamcify</title>
+    <style>
+        /* styles for the bordered fieldset */
+        fieldset {
+            border: 2px solid #333;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* styles for the label inside the fieldset */
+        legend {
+            font-weight: bold;
+        }
+
+        /* styles for the text area */
+        textarea {
+            width: 100%;
+            height: 4em; /* 4 rows */
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        /* styles for the button and radio buttons */
+        button, input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+    <script src="fancifymytext.js"></script>
+</head>
+<body>
+    <h1>Fancify my Text</h1>
+
+    <!-- Text fieldset -->
+    <fieldset>
+        <legend>Text</legend>
+        <textarea id="textArea" rows="4" cols="30"></textarea>
+    </fieldset>
+
+    <!-- Fancify fieldset -->
+    <fieldset>
+        <legend>Fancify</legend>
+        <button type="button" onclick="makeTextBigger()">Bigger!</button>
+        <label for="fancyShmancy">FancyShmancy</label>
+        <input type="radio" id="fancyShmancy" name="fancyOption" value="fancyShmancy" onchange="applyStyles()">
+        <label for="boringBetty">BoringBetty</label>
+        <input type="radio" id="boringBetty" name="fancyOption" value="boringBetty" onchange="applyStyles()">
+    </fieldset>
+
+    <!-- New "Moo" button -->
+    <button type="button" onclick="capitalizeAndMoo()">Moo</button>
+</body>
+</html>
